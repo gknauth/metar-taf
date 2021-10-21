@@ -1,0 +1,32 @@
+#lang racket/base
+
+(require "taf-metar.rkt")
+
+(define test-station "KIPT")
+(define test-stations (list "KIPT" "KUNV" "KAOO" "KIDI" "KHMZ" "KOYM"))
+
+(displayln "; data tafs")
+(get-tafs       test-stations)
+(displayln "; data metars")
+(get-metars     test-stations)
+(displayln "; data taf")
+(get-taf        test-station)
+(displayln "; data metar")
+(get-metar      test-station)
+(displayln "; data metar-taf")
+(get-metar-taf  test-station)
+(displayln "; data metar-tafs")
+(get-metar-tafs test-stations)
+
+(displayln "\n; display metar")
+(displayln-metar      test-station)
+(displayln "; display metars")
+(displayln-metars     test-stations)
+(displayln "; display taf")
+(displayln-taf        test-station)
+(displayln "; display tafs")
+(displayln-tafs       test-stations)
+(displayln "; display metar-taf")
+(displayln-metar-taf  test-station)
+(displayln "; display metar-tafs")
+(displayln-metar-tafs test-stations)
