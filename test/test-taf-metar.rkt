@@ -1,6 +1,6 @@
 #lang racket/base
 
-(require "taf-metar.rkt")
+(require "../taf-metar.rkt")
 
 (define test-station "KIPT")
 (define test-stations (list "KIPT" "KUNV" "KAOO" "KIDI" "KHMZ" "KOYM"))
